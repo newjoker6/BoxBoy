@@ -1,9 +1,9 @@
 extends Sprite
 
 var variants = [
-	"res://Textures/spinbladeBlood1.png",
-	"res://Textures/spinbladeBlood2.png",
-	"res://Textures/spinbladeBlood3.png"
+	"user://spinbladeBlood1.png",
+	"user://spinbladeBlood2.png",
+	"user://spinbladeBlood3.png"
 ]
 
 var bloody
@@ -13,7 +13,7 @@ var selection
 func _ready():
 	randomize()
 	$AnimationPlayer.play("Rotate")
-	selection = variants[round(rand_range(0, variants.size() - 1))]
+	selection = "user://spinbladeBlood3.png"
 
 
 

@@ -2,7 +2,7 @@ extends Sprite
 
 
 var variants = [
-	"res://spikesBlood.png"
+	"user://spikesBlood.png"
 ]
 
 var bloody
@@ -11,7 +11,7 @@ var selection
 
 func _ready():
 	randomize()
-	selection = variants[round(rand_range(0, variants.size() - 1))]
+	selection = "user://spikesBlood.png"
 
 
 
