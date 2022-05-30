@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Utils/Tilesets/Volcano.res" type="TileSet" id=3]
+[ext_resource path="res://Scenes/Doorway.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Hazard_Saw.tscn" type="PackedScene" id=5]
+
+[node name="Level1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 1278.26, 721.02 )
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 3 )
+format = 1
+tile_data = PoolIntArray( 262148, 2, 0, 262150, 0, 0, 262152, 0, 0, 262154, 1, 0, 393220, 4, 0, 589795, 2, 0, 589796, 1, 0, 524292, 4, 0, 720867, 1073741828, 0, 720868, 3, 0, 655364, 4, 0, 851939, 1610612739, 0, 851940, 3, 0, 786436, 4, 0, 983011, 1073741828, 0, 983012, 3, 0, 1114083, 1610612739, 0, 1114084, 3, 0, 1245155, 1073741826, 0, 1245156, 3, 0, 1245175, 2, 0, 1245177, 1, 0, 1376216, 0, 0, 1376218, 0, 0, 1376220, 0, 0, 1376222, 0, 0, 1376224, 0, 0, 1376226, 0, 0, 1376228, 3, 0, 1376247, 4, 0 )
+
+[node name="SpawnPoint" type="Position2D" parent="."]
+position = Vector2( 250, 1244 )
+
+[node name="Saw" parent="." instance=ExtResource( 5 )]
+position = Vector2( 717.846, 1225.29 )
+
+[node name="Saw2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 893.266, 1431.3 )
+
+[node name="Saw3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 852.132, 948.09 )
+
+[node name="Saw4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 710.711, 1038.17 )
+
+[node name="Doorway" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1515.86, 817.395 )

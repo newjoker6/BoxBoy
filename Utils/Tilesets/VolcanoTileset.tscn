@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://LevelSets/Volcano/lavaground4.png" type="Texture" id=1]
+[ext_resource path="res://LevelSets/Volcano/lavaground2.png" type="Texture" id=2]
+[ext_resource path="res://LevelSets/Volcano/lavaground5.png" type="Texture" id=3]
+[ext_resource path="res://LevelSets/Volcano/lavaground3.png" type="Texture" id=4]
+[ext_resource path="res://LevelSets/Volcano/lavaground1.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64.0192, 63.9877 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 63.9527, 63.9855 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 63.9589, 64.0063 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 64.0025, 64.0203 )
+
+[node name="Tileset" type="Node2D"]
+position = Vector2( 344.87, 292.545 )
+
+[node name="Volcano Level Set_Platformer - Ground 02" type="Sprite" parent="."]
+position = Vector2( -81.0682, -226.945 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Volcano Level Set_Platformer - Ground 02"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Volcano Level Set_Platformer - Ground 02/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Volcano Level Set_Platformer - Ground 05" type="Sprite" parent="."]
+position = Vector2( -85.0727, -74.773 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Volcano Level Set_Platformer - Ground 05"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Volcano Level Set_Platformer - Ground 05/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Volcano Level Set_Platformer - Ground 06" type="Sprite" parent="."]
+position = Vector2( 79.1126, -76.1079 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Volcano Level Set_Platformer - Ground 06"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Volcano Level Set_Platformer - Ground 06/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="Volcano Level Set_Platformer - Ground 07" type="Sprite" parent="."]
+position = Vector2( -262.606, 100.091 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Volcano Level Set_Platformer - Ground 07"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Volcano Level Set_Platformer - Ground 07/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="Volcano Level Set_Platformer - Ground 08" type="Sprite" parent="."]
+position = Vector2( -90.606, 100.091 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Volcano Level Set_Platformer - Ground 08"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Volcano Level Set_Platformer - Ground 08/StaticBody2D"]
+shape = SubResource( 4 )

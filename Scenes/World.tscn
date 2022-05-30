@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://LevelSets/Volcano/BG.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Level1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/World.gd" type="Script" id=4]
+[ext_resource path="res://loop1.wav" type="AudioStream" id=7]
+[ext_resource path="res://Scenes/Death.gd" type="Script" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1991.21, 15.7147 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 249.858, 1243.12 )
+
+[node name="Camera" type="Camera2D" parent="Player"]
+position = Vector2( 378.867, -0.309021 )
+current = true
+limit_right = 2000
+limit_bottom = 1500
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( -444, 1080 )
+motion_scale = Vector2( 0.1, 1 )
+motion_mirroring = Vector2( 1334, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 667.509, 7.51001 )
+scale = Vector2( 1, 1.45198 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 3.36353, 1555.66 )
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1094.07, -25.7147 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="Level1" parent="." instance=ExtResource( 3 )]
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://spikes.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Hazard_Spike.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Rotate"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32.2144, 20.1426 )
+
+[node name="Spike" type="Sprite"]
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Rotate = SubResource( 1 )
+
+[node name="SpikeArea" type="Area2D" parent="."]
+position = Vector2( -0.413438, 1.03356 )
+
+[node name="SpikeCollision" type="CollisionShape2D" parent="SpikeArea"]
+position = Vector2( 0.477756, 10.6927 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="SpikeArea" to="." method="_on_SawArea_body_entered"]

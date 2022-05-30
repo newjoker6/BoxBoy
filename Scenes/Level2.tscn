@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Hazard_Spike.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Utils/Tilesets/Volcano.res" type="TileSet" id=3]
+[ext_resource path="res://Scenes/Doorway.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Hazard_Saw.tscn" type="PackedScene" id=5]
+
+[node name="Level2" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 1278.26, 721.02 )
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 3 )
+format = 1
+tile_data = PoolIntArray( 262109, 1073741824, 0, 262111, 1073741824, 0, 262113, 1073741824, 0, 262115, 1073741824, 0, 262117, 1073741824, 0, 262119, 1073741824, 0, 262121, 1073741824, 0, 262123, 1073741824, 0, 262148, 2, 0, 262150, 0, 0, 262152, 0, 0, 262154, 1, 0, 393181, 1, 0, 393195, 2, 0, 393196, 1, 0, 393220, 4, 0, 524253, 3, 0, 524267, 4, 0, 524268, 3, 0, 589795, 2, 0, 589796, 1, 0, 524292, 4, 0, 655325, 3, 0, 655339, 4, 0, 655340, 3, 0, 720867, 4, 0, 720868, 3, 0, 655364, 4, 0, 786397, 3, 0, 786411, 4, 0, 786412, 3, 0, 851939, 4, 0, 851940, 3, 0, 786436, 4, 0, 917469, 3, 0, 917483, 4, 0, 917484, 3, 0, 983011, 4, 0, 983012, 3, 0, 1048541, 3, 0, 1048555, 4, 0, 1048556, 3, 0, 1048560, 2, 0, 1048561, 1, 0, 1114083, 4, 0, 1114084, 3, 0, 1179627, 4, 0, 1179628, 3, 0, 1179632, 4, 0, 1179633, 3, 0, 1245155, 4, 0, 1245156, 3, 0, 1310704, 4, 0, 1310705, 3, 0, 1376227, 4, 0, 1376228, 3, 0, 1441776, 4, 0, 1441777, 3, 0, 1507299, 4, 0, 1507300, 3, 0, 1507315, 0, 0, 1507317, 0, 0, 1507319, 0, 0, 1507321, 0, 0, 1507323, 0, 0, 1507325, 0, 0, 1507327, 0, 0, 1572848, 4, 0, 1572849, 3, 0, 1638363, 0, 0, 1638365, 0, 0, 1638367, 0, 0, 1638369, 0, 0, 1703918, 0, 0 )
+
+[node name="SpawnPoint" type="Position2D" parent="."]
+position = Vector2( 250, 1244 )
+
+[node name="Saw" parent="." instance=ExtResource( 5 )]
+position = Vector2( 631.954, 1439.55 )
+
+[node name="Saw2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2010.81, 1274.62 )
+
+[node name="Saw3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1926.26, 983.957 )
+
+[node name="Saw4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1688.56, 1213.73 )
+
+[node name="Doorway" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1218.14, 1392.28 )
+
+[node name="Spike" parent="." instance=ExtResource( 1 )]
+position = Vector2( 315.375, 1456.42 )
+
+[node name="Spike2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 250.317, 1456.77 )
+
+[node name="Spike3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 185.147, 1456.77 )
+
+[node name="Spike4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 121.728, 1456.77 )
+
+[node name="Spike5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 732.733, 1489.53 )
+
+[node name="Spike6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 894.948, 1391.72 )
+
+[node name="Spike7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 959.77, 1391.72 )
+
+[node name="Spike8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1025.15, 1391.72 )
+
+[node name="Spike9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1091.1, 1391.72 )
+
+[node name="Spike10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1158.17, 1391.72 )
+
+[node name="Spike11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1278.27, 1391.72 )
